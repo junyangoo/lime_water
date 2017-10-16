@@ -41,4 +41,3 @@ html = get_session(post_url, user_headers, post_data)
 page = html.get("https://github.com/pricing")  # 以登录身份获取登陆后页面
 print page.content
 
-
