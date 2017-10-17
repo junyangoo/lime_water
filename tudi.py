@@ -243,35 +243,35 @@ class Spider:
                       self.day += 1
                       print date, 'KO!'
 
-          # while(self.year <= 2017):
-          #     while(self.month <= 12):
-          #         day = 1
-          #         delta = self.timedelta(self.year, self.month)
-          #         print delta
-          #         # 一个月一个月的抓取
-          #         while day <= delta:
-          #             # 日期
-          #             date = self.handledate(self.year, self.month, day)
-          #             # 页数
-          #             # allNum = self.get_allnum(date)
-          #             # # 链接
-          #             # self.getall_links(allNum, date)
-          #             day += 1
-          #             print date, 'KO!'
-          #         self.month = self.month + 1
-          #     self.year = self.year + 1
-          #     self.month = 1
+          while(self.year <= 2017):
+              while(self.month <= 12):
+                  day = 1
+                  delta = self.timedelta(self.year, self.month)
+                  print delta
+                  # 一个月一个月的抓取
+                  while day <= delta:
+                      # 日期
+                      date = self.handledate(self.year, self.month, day)
+                      # 页数
+                      # allNum = self.get_allnum(date)
+                      # # 链接
+                      # self.getall_links(allNum, date)
+                      day += 1
+                      print date, 'KO!'
+                  self.month = self.month + 1
+              self.year = self.year + 1
+              self.month = 1
 
 
-# spider=Spider()
-# for i in range(0, 10000):
-#     spider.starturl()
+spider=Spider()
+for i in range(0, 10000):
+    spider.starturl()
 
-# a=spider.client.dequeueUrl("tudiurl",0)
-# spider.client.update("tudiurl",str(0),{"spider:state":"Download"})
-# spider.get_information(a["spider:url"])
-             
-      
+a=spider.client.dequeueUrl("tudiurl",0)
+spider.client.update("tudiurl",str(0),{"spider:state":"Download"})
+spider.get_information(a["spider:url"])
+
+
 
 
 
